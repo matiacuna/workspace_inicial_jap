@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         // console.log(userEmail)
         localStorage.setItem('email', userEmail);
         //redireccionando a la portada
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
     };
 
 });
