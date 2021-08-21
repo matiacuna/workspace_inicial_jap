@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         e.preventDefault();
         
         let userEmail= document.getElementById('userEmail').value;
-        //Guarda usuario en localhost
+        //Guarda usuario en localstorage
         localStorage.setItem('email', userEmail);
         //redireccionando a home
         window.location.href = 'home.html';
