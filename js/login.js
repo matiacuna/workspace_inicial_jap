@@ -3,14 +3,14 @@
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){    
     const loginForm = document.getElementById('signin');
-    //definir un evento para cuando se envie el formulario
+    //Evento para cuando se envie el formulario
     loginForm.onsubmit= function(e) {
         e.preventDefault();
-        //guardar el email en localst
+        
         let userEmail= document.getElementById('userEmail').value;
-        // console.log(userEmail)
+        //Guarda usuario en localhost
         localStorage.setItem('email', userEmail);
-        //redireccionando a la portada
+        //redireccionando a home
         window.location.href = 'home.html';
     };
 
