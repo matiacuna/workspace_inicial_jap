@@ -1,0 +1,35 @@
+.chatIcon{
+    
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    font-size: 80px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+
+}
+
+.chatBox{
+    
+    border-style: solid;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 350px;
+    height: 50vh;
+    z-index: 1000;
+    border-width: 3px;
+    border-color: rgba(34,159,188,255);
+    border-radius: 11px;
+    
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+    background-color: rgba(34,159,188,255);
+    
+}
+
+.chatBox.active{
+    transform: scaleY(1);
+
+}

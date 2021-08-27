@@ -12,16 +12,36 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css"> 
+
   </head>
   <body>
     <nav class="site-header sticky-top py-1 bg-dark">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+        <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      </div>
+        <div class="dropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="./img/img_user.png" style="margin-right: 5px;" width="25" height="25">
+            <span id="user"></span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="my-profile.html">Ver perfil</a>
+          </div>
+        </div>
+        
+        
+        <!-- <div>
+          <button class="btn btn-info" type="button">
+            <img src="./img/img_user.png" style="margin-right: 5px;" width="25" height="25">
+            <span id="user"></span>
+          </button>
+      </div> -->
+
+
     </nav>
     <main role="main">
       <section class="jumbotron text-center">
@@ -93,6 +113,19 @@
         </div>
       </div>
     </main>
+
+<!-- chatbot -->
+
+<div id= "chatIcon" class="chatIcon">
+  <img src="./img/bot.png" style="width: 80px;" alt="">
+</div>
+<div id="chatBox" class="chatBox">
+  <!-- <iframe src="https://web.powerva.microsoft.com/environments/Default-d918780d-bc01-45ee-b9f6-79c34e8a9c80/bots/new_bot_f0dba308a0c84aa29dc532058355678d/webchat" frameborder="0" style="width: 100%; height: 100%;">  -->
+  </div>
+
+
+<!-- chatbot end -->
+
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
@@ -102,6 +135,8 @@
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
     </footer>
+   
+    <script src="./js/chatbot.js"></script> 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>

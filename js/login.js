@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function(e){
         e.preventDefault();
         
         let userEmail= document.getElementById('userEmail').value;
-        //Guarda usuario en localstorage
-        localStorage.setItem('email', userEmail);
-        //redireccionando a home
-        window.location.href = 'home.html';
+       
+        localStorage.setItem('email', userEmail); //Guarda usuario en localstorage
+        
+        window.location.href = 'home.html'; //redireccionando a home
     };
 
 });
