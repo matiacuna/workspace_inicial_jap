@@ -45,5 +45,9 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
   document.getElementById("user").innerHTML =  localStorage.email;
+
+  if(localStorage.email == undefined){
+    window.location.href = 'index.html'
+  }
   
 });

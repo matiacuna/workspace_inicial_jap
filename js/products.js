@@ -59,7 +59,7 @@ function showProductsList(){
             <div class="col">
                 <div class="d-flex w-100 justify-content-between">
                     <h4 class="mb-1">` + productList.name + `</h4>
-                    <small class="text-muted">` + productList.soldCount + ` artículos</small>
+                    <small class="text-muted">` + productList.soldCount + ` artículos vendidos</small>
                     
                 </div>
                 <p class="mb-1">` + productList.description + `</p><br>
