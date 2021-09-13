@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>eMercado - Todo lo que busques está aquí</title>
+
+    <script src="https://kit.fontawesome.com/278630130a.js" crossorigin="anonymous"></script>
     <link rel="icon" href="img/icon.png">
+
+    
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -41,11 +45,56 @@
       <h2>Productos</h2>
       <p class="lead">Productos de la categoría <b>Auto</b></p>
   </div>
+  <div class="container">
 
+    <!-- filtros por max min y can. de vendidos -->
+  <div class="row">
+    <div class="col text-right">
+        <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+            <label class="btn btn-light active" id="sortAsc" >
+                <input type="radio" name="options" autocomplete="off" checked><i class="fas fa-dollar-sign"></i> <i class="fas fa-sort-numeric-up-alt"></i>
+            </label>
+            <label class="btn btn-light" id="sortDesc" >
+                <input type="radio" name="options" autocomplete="off"><i class="fas fa-dollar-sign"></i> <i class="fas fa-sort-numeric-down-alt"></i>
+            </label>
+            <label class="btn btn-light" id="sortBySoldCount" >
+                <input type="radio" name="options" autocomplete="off">Mas Vendidos
+            </label>
+        </div>
+    </div>
+</div>
+    <!-- fin filtros por max min y can. de vendidos -->
+
+<!-- filtro por rango de precio -->
+<div class="row justify-content-end">
+  <div class="col-md-6"></div>
+    <div class="col-md-6 col-sm-12 mb-1 container">
+      <div class="row container p-0 m-0">
+        <div class="col">
+          <p class="font-weight-normal text-right my-2">Cant.</p>
+        </div>
+        <div class="col">
+          <input class="form-control" type="number" placeholder="min." id="rangeFilterCostMin">
+        </div>
+        <div class="col">
+          <input class="form-control" type="number" placeholder="máx." id="rangeFilterCostMax">
+        </div>
+        <div class="col-3 p-0">
+          <div class="btn-group" role="group">
+            <button class="btn btn-light btn-block" id="rangeFilterCost">Filtrar</button>
+            <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- fin filtro por rango de precio -->
     <div id="product-list-container" class="container p-5">
+      
     </div>
     <tr></tr>
     </div>
+  </div>
 
 
 <!-- chatbot -->
