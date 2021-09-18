@@ -36,20 +36,20 @@
 
 .searchBox{
     
-    border-style: solid;
+    /* border-style: solid; */
     position: fixed;
     right: 32%;
     bottom: 45%;
     width: 30%;
     height: 50vh;
     z-index: 500;
-    border-width: 3px;
-    border-color: rgba(255,255,255);
-    border-radius: 11px;
+    /* border-width: 3px; */
+    /* border-color: rgba(255,255,255); */
+    /* border-radius: 11px; */
     
     /* transition: all 0.1s ease-out; */
     transform: scaleY(0);
-    background-color: rgba(255,255,255);
+    /* background-color: rgba(255,255,255); */
     
     
 }
