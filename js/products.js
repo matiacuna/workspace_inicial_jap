@@ -92,6 +92,8 @@ function sortAndShowProducts(sortCriteria, productArray){
 }
 // Fin funcion para setear un criterio para el orden y se muestra el producto
 
+
+// Funcion para buscar producto en tiempo real
 function search(){
      
     let htmlContentToAppend = "";
