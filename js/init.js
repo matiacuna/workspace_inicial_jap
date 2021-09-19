@@ -17,7 +17,7 @@ var hideSpinner = function(){
 
 var getJSONData = function(url){
     var result = {};
-    showSpinner();
+    // showSpinner();
     return fetch(url)
     .then(response => {
       if (response.ok) {
@@ -29,13 +29,13 @@ var getJSONData = function(url){
     .then(function(response) {
           result.status = 'ok';
           result.data = response;
-          hideSpinner();
+          // hideSpinner();
           return result;
     })
     .catch(function(error) {
         result.status = 'error';
         result.data = error;
-        hideSpinner();
+        // hideSpinner();
         return result;
     });
 }
