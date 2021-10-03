@@ -82,6 +82,16 @@ function search(){
 document.addEventListener("DOMContentLoaded", function(e){
   document.getElementById("user").innerHTML =  localStorage.email;
 
+  if( localStorage.email === ""){
+    window.location.href = 'index.html'
+  };
+
+  document.getElementById("logout").addEventListener("click", function(){
+    localStorage.email = "";
+
+
+  });
+
   document.getElementById("boton").addEventListener("click", function(e){
     e.preventDefault();
 

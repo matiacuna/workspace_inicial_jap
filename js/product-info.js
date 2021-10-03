@@ -1,3 +1,30 @@
+var product_Info = {};
+var products= {};
+var comments ={};
+
+// funcion para mostrar productos relacionado
+
+function showRelatedProducts(product,productRelated){ // se toma la lista de productos y el index 
+
+    let relatedProducts = document.getElementById("related_Products");
+    let htmlContentToAppend = "";
+
+    for(let i of productRelated){
+
+    htmlContentToAppend += `
+    
+        <div class="card" style="width: 18rem; margin-left: 2%; ">
+            <img class="card-img-top" src="` + product[i].imgSrc +` " alt="">
+            <div class="card-body">
+                <h5 class="card-title"> ` + product[i].name +`</h5>
+                <p class="card-text">`+product[i].currency+`  `+product[i].cost+`</p>
+                <a href="product-info.html" class="btn btn-info" >Ver producto</a>
+            </div>
+        </div>`}
+
+    relatedProducts.innerHTML = htmlContentToAppend;
+
+}
 
 // funcion para mostrar la información del producto
 function showProductInfo(p){
@@ -84,6 +111,9 @@ function newCommentsStars(scoreStars) {
     document.getElementById("StarsComments").innerHTML = stars;
 }
 
+
+
+// funcion para hacer un nuevo comentario
 function makeNewComment(){
     
 const userComent = document.getElementById("formComment");
@@ -118,17 +148,24 @@ const userComent = document.getElementById("formComment");
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
+
 document.addEventListener("DOMContentLoaded", function(e){
-    //muestro la información del producto 
-    getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
+    
+    //JSON de información del producto y lanzador de función Principal.-
+     getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok") {
             product_Info = resultObj.data;
 
     showProductInfo(product_Info);
        
-    
-    showGalleryImages(product_Info.images);//mustro las imagenes en el carrousel
+    showGalleryImages(product_Info.images); //mustro las imagenes en el carrousel
 
+    //muestro productos relacionados
+    getJSONData(PRODUCTS_URL).then(function(resultObj){
+        if (resultObj.status === "ok") {
+        products = resultObj.data;
+
+    showRelatedProducts(products,product_Info.relatedProducts);
 
     //muestro los comentarios del producto 
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
@@ -137,11 +174,10 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     showProductComments(comments);
     
-    makeNewComment()
-    
-
+    makeNewComment();//hacer nuevo commentario
 
     
-
-    
-}})}})});
+}})
+}})
+}})
+});
