@@ -96,14 +96,70 @@
     </div>
   </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+  
+<!-- carrito  -->
+
+<div class="container">
+  <div class="text-center p-4"><h2>Carrito de compras</h2></div>
+  <div class="carrito">
+   <div class="text-center">
+  <table class="table table-sm table-striped table-hover table-ligth">
+    <thead class="table-info">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Artículo</th>
+        <th scope="col">Moneda</th>
+        <th scope="col">Cantidad de artículos</th>
+        <th scope="col">Precio unitario</th>
+        <th scope="col">Precio Subtotal</th>
+      </tr>
+    </thead>
+    <tbody id="listado"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" style="text-align: left;"><br><b>Precio Total: $</b><span id="total"></span></td>
+          
+        </tr>
+      </tfoot>
+      </table>
+    <hr>
+
   </div>
+</div>
+</div>
+<!-- end carrito  -->
+
+<!--- ship method -->
+
+<div class="container">
+  <div style="float: left;">
+<h4>Método de envío</h4>
+  <div>
+    <input id="premium" name="envio" type="radio" value="15" checked="" required="">
+      <label for="premium">Premium (2-5 días): Costo del 15% sobre el subtotal. </label> <br>
+
+      <input id="express" name="envio" type="radio" value="7" required="">
+      <label for="express">Express (5-8 días) - Costo del 7% sobre el subtotal.</label> <br>
+      
+      <input id="standard" name="envio" type="radio" value="5" required="">
+      <label for="standard">Standard (12 a 15 días) - Costo del 5% sobre el subtotal.</label>
+  </div>
+</div>
+  
+  <div style="float: right; width: 400px; ">
+   <h4>Datos personales</h4>
+<div class="text-center">
+  <input type="text" class="form-control" placeholder="Nombre y apellido" required> 
+  <input type="text" class="form-control" placeholder="Edad" required> 
+  <input type="text" class="form-control" placeholder="Dirección" required> 
+</div>  
+</div>
+
+</div>
+
+
+  <!--- end ship method -->
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
