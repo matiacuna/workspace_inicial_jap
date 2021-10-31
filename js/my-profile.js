@@ -51,7 +51,7 @@ function showUserData(userInfo){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) {
 
-    saveUser()
+    
     showUserData(localStorage.profile);
     
     document.getElementById("save").addEventListener("click", function(e){
