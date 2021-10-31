@@ -50,27 +50,32 @@ function showProductsList(){
         if (((minCost == undefined) || (minCost != undefined && parseInt(productList.cost) >= minCost)) &&
             ((maxCost == undefined) || (maxCost != undefined && parseInt(productList.cost) <= maxCost))){
 
-            htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + productList.imgSrc + `" alt="` + productList.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">` + productList.name + `</h4>
-                            <small class="text-muted">` + productList.soldCount + ` vendidos</small>
-                            
-                        </div>
-                        <p class="mb-1">` + productList.description + `</p><br>
-                        <p><b> ` + productList.currency + `-` + productList.cost + `</b><p>
-                    </div>
-                </div>
-            </a>
+            htmlContentToAppend += 
+
             `
+            <div class="col-md-4" style="margin-top:2%;">
+
+            <div class="card" >
+                <img class="card-img-top" src="` + productList.imgSrc +` " alt="">
+                <div class="card-body">
+
+                    <h4 class="card-title"> ` + productList.name +`</h4>
+                    <p class="card-text">`+productList.description+`</p>
+                    <h5 class="card-text"><b>`+productList.currency+`  `+productList.cost+`</b></h5>
+                    <p class=" text-muted" >`+productList.soldCount+`  Vendidos </p>
+
+                    <a class="btn btn-outline-info btn-lg btn-block" href="product-info.html" role="button">Ver Producto</a>
+
+                    
+                </div>
+            </div>
+
+            </div>
+            `
+            
         }
 
-        document.getElementById("product-list-container").innerHTML = htmlContentToAppend;
+        document.getElementById("productos").innerHTML = htmlContentToAppend;
     }
 }
 //Fin función para mostrar los productos

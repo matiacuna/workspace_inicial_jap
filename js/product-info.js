@@ -12,6 +12,7 @@ function showRelatedProducts(product,productRelated){ // se toma la lista de pro
     for(let i of productRelated){
 
     htmlContentToAppend += `
+    <div class="col-md-6"
     
         <div class="card" style="width: 18rem; margin-left: 2%; ">
             <img class="card-img-top" src="` + product[i].imgSrc +` " alt="">
@@ -20,6 +21,7 @@ function showRelatedProducts(product,productRelated){ // se toma la lista de pro
                 <p class="card-text">`+product[i].currency+`  `+product[i].cost+`</p>
                 <a href="product-info.html" class="btn btn-info" >Ver producto</a>
             </div>
+        </div>
         </div>`}
 
     relatedProducts.innerHTML = htmlContentToAppend;
