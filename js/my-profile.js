@@ -52,14 +52,13 @@ function showUserData(userInfo){
 document.addEventListener("DOMContentLoaded", function (e) {
 
     
-    showUserData(localStorage.profile);
     
     document.getElementById("save").addEventListener("click", function(e){
         saveUser();
         showUserData(localStorage.profile);
     });
 
-
+    showUserData(localStorage.profile);
 
 
 });
